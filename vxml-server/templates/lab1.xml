@@ -20,7 +20,7 @@
     <block>
       <prompt>
         <break time="2000" />
-        Welcome to the flight booking service.
+        Hello and and Welcome to the flight booking service.
       </prompt>
       <goto next="#askFrom" />
     </block>
