@@ -22,7 +22,7 @@
   <!-- main menu -->
   <menu id="mainmenu">
     <prompt>
-        <break time="2000" />Welcome to the flights booking service. Do you want to <enumerate />
+        <break time="3000" />Welcome to the flights booking service. Do you want to <enumerate />
     </prompt>
     <choice next="#askFrom"> book a flight </choice>
     <choice next="#askDelayed"> check for delays </choice>
