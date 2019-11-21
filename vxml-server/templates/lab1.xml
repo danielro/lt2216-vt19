@@ -2,7 +2,7 @@
 <vxml version="2.1" xmlns="http://www.w3.org/2001/vxml"
       xmlns:voxeo="http://community.voxeo.com/xmlns/vxml">
   <nomatch>
-    I didn't understand.
+    I didn't understand that. try again.
     <reprompt/>
   </nomatch>
   
