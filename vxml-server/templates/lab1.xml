@@ -39,7 +39,7 @@
   <form id="askFrom">
       <field name="fromField">
           <prompt bargein="false">
-              <break time="600" />What city are you leaving from?       
+              <break time="600" />Ok. What city are you leaving from?       
           </prompt>
           <noinput>You can choose: London, Paris or New York.<reprompt />
           </noinput>
