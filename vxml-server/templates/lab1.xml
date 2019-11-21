@@ -39,7 +39,7 @@
   <form id="askFrom">
       <field name="fromField">
           <prompt bargein="false">
-              <break time="600" />Ok. What city are you leaving from?       
+              <break time="600" />Okay, what city are you leaving from?       
           </prompt>
           <noinput>You can choose: London, Paris or New York.<reprompt />
           </noinput>
@@ -56,7 +56,7 @@
   <form id="askTo">
       <field name="toField">
           <prompt bargein="false">
-              <break time="600" />Ok. What city are you travelling to?
+              <break time="600" />Okay, what city are you travelling to?
           </prompt>
           <noinput>You can choose: London, Paris or New York.<reprompt />
           </noinput>
@@ -79,7 +79,7 @@
   <!-- Departure date  -->
   <form id="askLeaveDate">
       <field name="leaveDateField">
-          <prompt bargein="false">Ok. What date do you want to leave?</prompt>
+          <prompt bargein="false">Okay, what date do you want to leave?</prompt>
           <option>Monday</option>
           <option>Tuesday</option>
           <option>Wednesday</option>
@@ -100,7 +100,7 @@
   <!-- Select one-way trip or return -->
   <form id="askReturn">
       <field name="returnField">
-          <prompt bargein="false" timeout="3s">Ok. Is it a one-way trip?</prompt>
+          <prompt bargein="false" timeout="3s">Okay, is it a one-way trip?</prompt>
           <option>yes</option>
           <option>no</option>
       </field>
@@ -117,7 +117,7 @@
   <!-- ask return day if 'no' for one way -->
   <form id="askReturnDate">
       <field name="returnDateField">
-          <prompt bargein="false">Ok. What date do you want to return?</prompt>
+          <prompt bargein="false">Okay, what date do you want to return?</prompt>
           <option>Monday</option>
           <option>Tuesday</option>
           <option>Wednesday</option>
@@ -175,7 +175,7 @@
   </form>
   <!-- final booking confirmation -->
   <form id="confirmFlight">
-      <block>Your flight has been booked! 
+      <block>Your flight has been booked! Have a nice day!
           <goto next="#mainmenu" />
       </block>
   </form>
