@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <vxml version="2.1" xmlns="http://www.w3.org/2001/vxml"
-      xmlns:voxeo="http://community.voxeo.com/xmlns/vxml" application="lab1_delays">
+      xmlns:voxeo="http://community.voxeo.com/xmlns/vxml" application="lab1_menu">
 
 	<link next="lab1_menu">
 	    <grammar mode="voice" version="1.0" xml:lang="en-US" root="root_rule">
