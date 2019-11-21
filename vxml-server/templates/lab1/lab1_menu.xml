@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vxml version="2.1" xmlns="http://www.w3.org/2001/vxml"
+      xmlns:voxeo="http://community.voxeo.com/xmlns/vxml">
+  <nomatch>
+    I do not understand.
+    <reprompt/>
+  </nomatch>
+  
+  <noinput>
+    You did not say anything.
+    <reprompt/>
+  </noinput>
+
+  <!-- main menu -->
+  <menu id="mainmenu">
+    <prompt>
+        <break time="3000" />Welcome to the flights booking service. Do you want to <enumerate />
+    </prompt>
+    <choice next="lab1_book"> book a flight </choice>
+    <choice next="lab1_delays"> check for delays </choice>
+  </menu>
+</vxml>
