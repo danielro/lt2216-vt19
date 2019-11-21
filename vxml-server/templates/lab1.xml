@@ -24,7 +24,7 @@
     <prompt>
         <break time="2000" />Welcome to the flights booking service. Do you want to <enumerate />
     </prompt>
-    <choice next="#askFrom"> book </choice>
+    <choice next="#askFrom"> book a flight </choice>
     <choice next="#askDelayed"> check for delays </choice>
   </menu>
 
