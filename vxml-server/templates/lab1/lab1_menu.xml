@@ -18,5 +18,6 @@
     </prompt>
     <choice next="lab1_book"> book a flight </choice>
     <choice next="lab1_delays"> check for delays </choice>
+    <choice next="lab2"> check quotes </choice>
   </menu>
 </vxml>
