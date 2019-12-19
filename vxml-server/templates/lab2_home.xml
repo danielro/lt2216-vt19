@@ -17,9 +17,10 @@
     </field>
     <filled>
       <prompt>
-        You said: <value expr="smartaction$.utterance" />,
-        with the interpretation <value expr="smartaction$.interpretation.action" /> <value expr="smartaction$.interpretation.object" />
-        and with a confidence of <value expr="smartaction$.confidence" />.
+        You said: <value expr="smartaction$.utterance" />.
+        Action was: <value expr="smartaction$.interpretation.action" />.
+        Object was: <value expr="smartaction$.interpretation.object" />.
+        The confidence is <value expr="smartaction$.confidence" />.
         <break time="2s"/>
       </prompt>
 
