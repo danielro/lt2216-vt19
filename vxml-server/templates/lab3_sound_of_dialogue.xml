@@ -9,7 +9,7 @@
 		<break time="2.5s"/> 
 		What <prosody volume="loud">time</prosody> would you like to <prosody volume="medium">start</prosody>? 
 		<break time="2.5s"/> 
-		How much <prosody volume="loud">time</prosody> do you want to <prosody volume="medium">block out</prosody>? 
+		How much <prosody volume="loud">time</prosody> do you want to <break time="300ms"/> <prosody volume="medium">block out</prosody>? 
 		<break time="800ms"/> 
 		What shall we <prosody volume="loud">call</prosody> this? 
 		<break time="1.5s"/> 
