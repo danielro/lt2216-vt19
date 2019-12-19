@@ -31,9 +31,16 @@ def lab1_menu():
     response.headers["Content-Type"] = "application/xml"
     return response
 
-@app.route('/lab2')
-def lab2():
-    vxml = render_template('lab2.xml')
+@app.route('/lab2_quotes')
+def lab2_quotes():
+    vxml = render_template('lab2_quotes.xml')
+    response = make_response(vxml)
+    response.headers["Content-Type"] = "application/xml"
+    return response
+
+@app.route('/lab2_home')
+def lab2_home():
+    vxml = render_template('lab2_home.xml')
     response = make_response(vxml)
     response.headers["Content-Type"] = "application/xml"
     return response
