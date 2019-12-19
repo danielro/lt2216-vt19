@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<grammar version="1.0" tag-format="semantics/1.0" root="ObjectsActionsTies">
+  <rule id="objects" scope="public">
+    <one-of>
+      <item>the garage<tag>out="the garage";</tag></item>
+      <item>the garage door<tag>out="the garage";</tag></item>
+      <item>the shades<tag>out="the shades";</tag></item>
+      <item>the skylight<tag>out="the skylight";</tag></item>
+      <item>the skylights<tag>out="the skylight";</tag></item>
+    </one-of>
+  </rule>
+  <rule id="actions" scope="public">
+    <one-of>
+      <item>open<tag>out="open";</tag></item>
+      <item>close<tag>out="close";</tag></item>
+    </one-of>
+  </rule>
+  <rule id="ties" scope="public">
+    <one-of>
+      <item>
+        <ruleref uri="#actions" />
+        <ruleref uri="#objects" />
+        <tag>out.action=rules.actions; out.object=rules.objects</tag>
+      </item>
+    </one-of>
+</rule>
+</grammar>
