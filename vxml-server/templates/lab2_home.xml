@@ -23,7 +23,7 @@
         <break time="2s"/>
       </prompt>
 
-      <goto next="house" />
+      <goto next="#house" />
     </filled>
   </form>
 </vxml>
