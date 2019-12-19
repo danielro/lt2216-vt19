@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<vxml version="2.0">
+  <form id="test">
+    <block name="foo">
+      <prompt>
+		I have your <prosody volume="medium">calendar</prosody> <prosody volume="loud">open</prosody>. 
+		<break time="300ms"/> 
+		For what <prosody volume="medium">date</prosody>? 
+		<break time="1s"/> 
+		What <prosody volume="loud">time</prosody> would you like to <prosody volume="medium">start</prosody>? 
+		<break time="1.2s"/> 
+		How much <prosody volume="loud">time</prosody> do you want to <prosody volume="medium">block out</prosody>? 
+		<break time="500ms"/> 
+		What shall we <prosody volume="loud">call</prosody> this? 
+		<break time="1s"/> 
+		Ok, it's set. You are meeting <prosody volume="loud">Frank</prosody> for <prosody volume="medium">breakfast</prosody> on <say-as interpret-as="date" format="day">May 1</say-as> from <say-as interpret-as="cardinal">7</say-as> to <say-as interpret-as="cardinal ">8</say-as>.
+        
+        <break time="2s"/>
+
+      </prompt> 
+    </block>
+  </form>
+</vxml>
