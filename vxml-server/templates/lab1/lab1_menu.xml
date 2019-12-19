@@ -20,5 +20,6 @@
     <choice next="lab1_delays"> check for delays </choice>
     <choice next="lab2_quotes"> check quotes </choice>
     <choice next="lab2_home"> control home </choice>
+    <choice next="lab3"> check "Speech Synthesis" </choice>
   </menu>
 </vxml>
