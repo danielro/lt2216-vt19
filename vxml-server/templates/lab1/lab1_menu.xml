@@ -21,6 +21,6 @@
     <choice next="lab2_quotes"> check quotes </choice>
     <choice next="lab2_home"> control home </choice>
     <choice next="lab3"> check "Speech Synthesis" </choice>
-    <choice next="lab3"> check sound of dialogue </choice>
+    <choice next="lab3_sound_of_dialogue"> check sound of dialogue </choice>
   </menu>
 </vxml>
