@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<vxml version="2.0">
+<vxml version="2.1" xmlns="http://www.w3.org/2001/vxml"
+      xmlns:voxeo="http://community.voxeo.com/xmlns/vxml">
   <nomatch>
     I didn't understand. 
   </nomatch>
@@ -11,7 +12,7 @@
 
   <form id="house">
     <field name="smartaction">
-      <prompt>Welcome. Open or close the: garage, shades or the skylights.</prompt>
+      <prompt>You can: Open or close the: garage, shades or the skylights.</prompt>
       <grammar src="grammars/lab2_actions_objects.xml" />
     </field>
     <filled>
@@ -19,10 +20,10 @@
         You said: <value expr="smartaction$.utterance" />,
         with the interpretation <value expr="smartaction$.interpretation" />
         and with a confidence of <value expr="smartaction$.confidence" />.
+        <break time="2s"/>
       </prompt>
 
-      <break time="3s" />
-      <goto next="#house" />
+      <goto next="house" />
     </filled>
   </form>
 </vxml>
