@@ -4,16 +4,16 @@
     <block name="foo">
       <prompt>
 		I have your <prosody volume="medium">calendar</prosody> <prosody volume="loud">open</prosody>. 
-		<break time="300ms"/> 
+		<break time="2s"/> 
 		For what <prosody volume="medium">date</prosody>? 
-		<break time="1s"/> 
+		<break time="2.5s"/> 
 		What <prosody volume="loud">time</prosody> would you like to <prosody volume="medium">start</prosody>? 
-		<break time="1.2s"/> 
+		<break time="2.5s"/> 
 		How much <prosody volume="loud">time</prosody> do you want to <prosody volume="medium">block out</prosody>? 
-		<break time="500ms"/> 
+		<break time="800ms"/> 
 		What shall we <prosody volume="loud">call</prosody> this? 
-		<break time="1s"/> 
-		Ok, it's set. You are meeting <prosody volume="loud">Frank</prosody> for <prosody volume="medium">breakfast</prosody> on <say-as interpret-as="date" format="day">May 1</say-as> from <say-as interpret-as="cardinal">7</say-as> to <say-as interpret-as="cardinal ">8</say-as>.
+		<break time="1.5s"/> 
+		Ok, it's set. You are meeting <prosody volume="loud">Frank</prosody> <break time="500ms"/> for <prosody volume="medium">breakfast</prosody> on <say-as interpret-as="date" format="day">May 1</say-as> from <say-as interpret-as="cardinal">7</say-as> to <say-as interpret-as="cardinal ">8</say-as>.
         
         <break time="2s"/>
 
