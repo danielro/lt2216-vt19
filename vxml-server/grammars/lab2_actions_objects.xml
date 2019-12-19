@@ -15,7 +15,7 @@
       <item>close<tag>out="close";</tag></item>
     </one-of>
   </rule>
-  <rule id="ties" scope="public">
+  <rule id="ObjectsActionsTies" scope="public">
     <one-of>
       <item>
         <ruleref uri="#actions" />
@@ -23,5 +23,5 @@
         <tag>out.action=rules.actions; out.object=rules.objects</tag>
       </item>
     </one-of>
-</rule>
+  </rule>
 </grammar>
