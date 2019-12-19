@@ -21,13 +21,12 @@
 	  <break time="2s"/>
 	</prompt>
 
-    </filled>
-  </form>
-  <form id="forward">
     <block>
       Good to know!
       <goto next="lab1_menu" />
     </block>
+
+    </filled>
   </form>
 
 </vxml>
