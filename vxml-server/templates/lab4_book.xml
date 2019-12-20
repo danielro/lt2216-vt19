@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vxml version="2.1" xmlns="http://www.w3.org/2001/vxml"
+      xmlns:voxeo="http://community.voxeo.com/xmlns/vxml">
+  <nomatch>
+    I do not understand.
+    <reprompt/>
+  </nomatch>
+  
+  <noinput>
+    You did not say anything.
+    <reprompt/>
+  </noinput>
+
+  <!-- Data model -->
+  <var name="from" />
+  <var name="to" />
+  <var name="leavedate" />
+  <var name="returndate" />
+  <var name="confirm" />
+
+  <form id="bookingForm">
+    <grammar src="grammars/lab4_grammars.xml" />
+
+    <initial name="bypass_init">
+      <prompt>
+        Where do you want to fly from and to?
+      </prompt>
+      <nomatch count="1">
+        Please say something like "from Paris to London".
+      </nomatch>
+      <nomatch count="2">
+        I'm sorry, I still don't understand.
+        I'll ask you for information one piece at a time.
+        <assign name="bypass_init" expr="true"/>
+        <reprompt/>
+      </nomatch>
+    </initial>
+
+    <field name="fromField">
+        <prompt bargein="false">
+            <break time="600" />Okay, what city are you leaving from?       
+        </prompt>
+        <noinput>You can choose: London, Paris or New York.<reprompt />
+        </noinput>
+        <option>london</option>
+        <option>paris</option>
+        <option>new york</option>
+    </field>
+
+    <field name="toField">
+        <prompt bargein="false">
+            <break time="600" />Okay, what city are you travelling to?
+        </prompt>
+        <noinput>You can choose: London, Paris or New York.<reprompt />
+        </noinput>
+        <option>london</option>
+        <option>paris</option>
+        <option>new york</option>
+    </field>
+    <filled>
+        <assign name="from" expr="fromField" />
+        <assign name="to" expr="toField" />
+    </filled>
+
+
+
+
+  </form>
+
+
+
+</vxml>

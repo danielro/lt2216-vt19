@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vxml version="2.1" xmlns="http://www.w3.org/2001/vxml"
+      xmlns:voxeo="http://community.voxeo.com/xmlns/vxml" application="lab1_menu">
+
+	<link next="lab4"></link>
+
+  <!-- delayed flights form -->
+  <form id="askDelayed">
+    <block>
+      There are no current reported delays.
+      <goto next="lab4" />
+    </block>
+  </form>
+
+</vxml>
