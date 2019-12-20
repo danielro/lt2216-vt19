@@ -2,20 +2,18 @@
 <grammar version="1.0" tag-format="semantics/1.0" root="init">
 
   <rule id="places" scope="public">
-    <one-of>
       <item> paris </item>
       <item> london </item>
       <item> new york </item>
-    </one-of>
   </rule>
 
 
   <rule id="init" scope="public">
     <item>
      from
-     <ruleref uri="#fromField"/>
+     <ruleref uri="#places"/>
      to
-     <ruleref uri="#toField"/>
+     <ruleref uri="#places"/>
      <tag>out.fromField = rules.places; out.toField = rules.places; </tag>
     </item>
   </rule> 
