@@ -1,19 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <grammar version="1.0" tag-format="semantics/1.0" root="init">
 
-  <rule id="fromField" scope="public">
+  <rule id="places" scope="public">
     <one-of>
       <item> paris </item>
       <item> london </item>
+      <item> new york </item>
     </one-of>
   </rule>
 
-  <rule id="toField" scope="public">
-    <one-of>
-      <item> paris </item>
-      <item> london </item>
-    </one-of>
-  </rule>
 
   <rule id="init" scope="public">
     <item>
@@ -21,8 +16,10 @@
      <ruleref uri="#fromField"/>
      to
      <ruleref uri="#toField"/>
-     <tag>out.fromField = rules.fromField; out.toField = rules.toField; </tag>
+     <tag>out.fromField = rules.places; out.toField = rules.places; </tag>
     </item>
   </rule> 
+
+
 
 </grammar>

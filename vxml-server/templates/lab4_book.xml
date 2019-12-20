@@ -42,9 +42,7 @@
         </prompt>
         <noinput>You can choose: London, Paris or New York.<reprompt />
         </noinput>
-        <option>london</option>
-        <option>paris</option>
-        <option>new york</option>
+        <grammar src="grammars/lab4_grammars.xml#places" />
     </field>
 
     <field name="toField">
@@ -53,9 +51,7 @@
         </prompt>
         <noinput>You can choose: London, Paris or New York.<reprompt />
         </noinput>
-        <option>london</option>
-        <option>paris</option>
-        <option>new york</option>
+        <grammar src="grammars/lab4_grammars.xml#places" />
     </field>
 
     <field name="leaveDateField">
