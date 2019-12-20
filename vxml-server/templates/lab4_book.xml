@@ -75,7 +75,7 @@
         <assign name="leavedate" expr="leaveDateField" />
 
         <prompt>
-          You said: from <value expr="fromField" /> to <value expr="toField" /> on <value expr="leaveDateField" />
+          You said: from <value expr="from" /> to <value expr="to" /> on <value expr="leaveDateField" />
           <break time="2s"/>
         </prompt>
         <goto next="#bookingForm"/>
