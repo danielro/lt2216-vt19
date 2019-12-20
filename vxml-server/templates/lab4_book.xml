@@ -57,12 +57,29 @@
         <option>paris</option>
         <option>new york</option>
     </field>
+
+    <field name="leaveDateField">
+        <prompt bargein="false">Okay, what date do you want to leave?</prompt>
+        <option>Monday</option>
+        <option>Tuesday</option>
+        <option>Wednesday</option>
+        <option>Thursday</option>
+        <option>Friday</option>
+        <option>Saturday</option>
+        <option>Sunday</option>
+        <nomatch>
+          I did not hear that. You can select from Monday to Sunday.
+        <reprompt />
+        </nomatch>
+    </field>
+
     <filled>
         <assign name="from" expr="fromField" />
         <assign name="to" expr="toField" />
+        <assign name="leavedate" expr="leaveDateField" />
 
         <prompt>
-          You said: from <value expr="fromField" /> to <value expr="toField" />
+          You said: from <value expr="fromField" /> to <value expr="toField" /> on <value expr="leaveDateField" />
           <break time="2s"/>
         </prompt>
         <goto next="#bookingForm"/>
