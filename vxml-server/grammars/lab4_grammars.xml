@@ -21,7 +21,7 @@
      <ruleref uri="#fromField"/>
      to
      <ruleref uri="#toField"/>
-     <tag>out.fromField = rules.fromField; out.toField = rules.toField; </tag>
+     <tag>out = rules.fromField; out = rules.toField; </tag>
     </item>
   </rule> 
 
