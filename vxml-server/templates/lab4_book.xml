@@ -60,6 +60,14 @@
     <filled>
         <assign name="from" expr="fromField" />
         <assign name="to" expr="toField" />
+
+        <prompt>
+          You said: from <value expr="fromField" /> to <value expr="toField" />
+          <break time="2s"/>
+        </prompt>
+        <goto next="#bookingForm"/>
+
+
     </filled>
 
 
