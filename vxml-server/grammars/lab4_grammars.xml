@@ -13,9 +13,9 @@
   <rule id="init" scope="public">
     <item>
      from
-     <ruleref uri="#fromField"/>
+     <ruleref uri="#places"/>
      to
-     <ruleref uri="#toField"/>
+     <ruleref uri="#places"/>
      <tag>out.fromField = rules.places; out.toField = rules.places; </tag>
     </item>
   </rule> 
