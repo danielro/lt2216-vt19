@@ -5,6 +5,16 @@
   <rule id="init" scope="public">
     <one-of>
       <item>
+          <ruleref uri="#fromField" />
+          <ruleref uri="#places" />
+          <ruleref uri="#toField" />
+          <ruleref uri="#places" />
+          <ruleref uri="#leaveDateField" />
+          <ruleref uri="#returnDateField" />
+
+          <tag>out.fromField=rules.fromField; out.places=rules.places;out.toField=rules.toField; out.places=rules.places; out.leaveDateField=rules.leaveDateField; out.returnDateField=rules.returnDateField;</tag>
+      </item>
+      <item>
         <ruleref uri="#fromField" />
         <tag>out.fromField = rules.fromField;</tag>
       </item>
@@ -29,13 +39,6 @@
           <ruleref uri="#toField" />
           <ruleref uri="#places" />
           <tag>out.toField=rules.toField; out.places=rules.places;</tag>
-      </item>
-      <item>
-          <ruleref uri="#fromField" />
-          <ruleref uri="#places" />
-          <ruleref uri="#toField" />
-          <ruleref uri="#places" />
-          <tag>out.fromField=rules.fromField; out.places=rules.places;out.toField=rules.toField; out.places=rules.places;</tag>
       </item>
     </one-of>
   </rule>
