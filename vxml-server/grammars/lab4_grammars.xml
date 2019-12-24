@@ -71,7 +71,7 @@
           </item>
       </one-of>
       <ruleref uri="#places" />
-      <tag>out.fromField=rules.places;</tag>
+      <tag>out=rules.places;</tag>
   </rule>
 
   <rule id="toField" scope="public">
@@ -98,7 +98,7 @@
           </item>
       </one-of>
       <ruleref uri="#places" />
-      <tag>out.toField=rules.places;</tag>
+      <tag>out=rules.places;</tag>
   </rule>
 
   <rule id="leaveDateField" scope="public">
@@ -113,7 +113,7 @@
           </item>
       </one-of>
       <ruleref uri="#dates" />
-      <tag>out.leaveDateField=rules.dates;</tag>
+      <tag>out=rules.dates;</tag>
   </rule>
 
   <rule id="returnDateField" scope="public">
@@ -128,7 +128,7 @@
           </item>
       </one-of>
       <ruleref uri="#dates" />
-      <tag>out.returnDateField=rules.dates;</tag>
+      <tag>out=rules.dates;</tag>
   </rule>
 
   <rule id="places" scope="public">
