@@ -26,7 +26,7 @@
         Where do you want to fly from and to?
       </prompt>
       <nomatch count="1">
-        Please say something like "from Paris to London".
+        Please say something like "from Paris to London on Monday".
       </nomatch>
       <nomatch count="2">
         I'm sorry, I still don't understand.
@@ -56,26 +56,30 @@
 
     <field name="leaveDateField">
         <prompt bargein="false">Okay, what date do you want to leave?</prompt>
-        <option>Monday</option>
-        <option>Tuesday</option>
-        <option>Wednesday</option>
-        <option>Thursday</option>
-        <option>Friday</option>
-        <option>Saturday</option>
-        <option>Sunday</option>
         <nomatch>
           I did not hear that. You can select from Monday to Sunday.
         <reprompt />
         </nomatch>
+        <grammar src="grammars/lab4_grammars.xml#dates" />
     </field>
+    
+    <field name="returnDateField">
+          <prompt bargein="false">Okay, what date do you want to return?</prompt>
+          <nomatch>
+            I did not hear that. You can select from Monday to Sunday.
+            <reprompt />
+          </nomatch>
+          <grammar src="grammars/lab4_grammars.xml#dates" />
+      </field>
 
     <filled>
         <assign name="from" expr="fromField" />
         <assign name="to" expr="toField" />
         <assign name="leavedate" expr="leaveDateField" />
+        <assign name="returndate" expr="returnDateField" />
 
         <prompt>
-          You said: from <value expr="from" /> to <value expr="to" /> on <value expr="leaveDateField" />
+          You said: from <value expr="from" /> to <value expr="to" /> on <value expr="leavedate" /> returning on  <value expr="returndate" />
           <break time="2s"/>
         </prompt>
         <goto next="#bookingForm"/>

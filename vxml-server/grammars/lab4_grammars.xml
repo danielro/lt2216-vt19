@@ -1,13 +1,202 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <grammar version="1.0" tag-format="semantics/1.0" root="init">
 
-  <rule id="places" scope="public">
-      <item> paris </item>
-      <item> london </item>
-      <item> new york </item>
+  <!-- main rule here -->
+  <rule id="bookForm" scope="public">
+    <one-of>
+      <item>
+        <ruleref uri="fromField" />
+        <tag>out = rules.fromField;</tag>
+      </item>
+      <item>
+        <ruleref uri="toField" />
+        <tag>out = rules.toField;</tag>
+      </item>
+      <item>
+        <ruleref uri="leaveDateField" />
+        <tag>out = rules.leaveDateField;</tag>
+      </item>
+      <item>
+        <ruleref uri="returnDateField" />
+        <tag>out = rules.returnDateField;</tag>
+      </item>
+      <item>
+          <ruleref uri="#fromField" />
+          <ruleref uri="#places" />
+          <tag>out=rules.fromField; out=rules.places;</tag>
+      </item>
+      <item>
+          <ruleref uri="#toField" />
+          <ruleref uri="#places" />
+          <tag>out=rules.toField; out=rules.places;</tag>
+      </item>
+      <item>
+          <ruleref uri="#fromField" />
+          <ruleref uri="#places" />
+          <ruleref uri="#toField" />
+          <ruleref uri="#places" />
+          <tag>out=rules.fromField; out=rules.places;out=rules.toField; out=rules.places;</tag>
+      </item>
+    </one-of>
   </rule>
 
+  <rule id="fromField" scope="public">
+      <one-of>
+          <item>
+              from
+              <tag>out="from";</tag>
+          </item>
+          <item>
+              leave from
+              <tag>out="from";</tag>
+          </item>
+          <item>
+              leaving from
+              <tag>out="from";</tag>
+          </item>
+          <item>
+              leave
+              <tag>out="from";</tag>
+          </item>
+          <item>
+              go from
+              <tag>out="from";</tag>
+          </item>
+          <item>
+              going from
+              <tag>out="from";</tag>
+          </item>
+      </one-of>
+      <ruleref uri="#places" />
+      <tag>out=rules.places;</tag>
+  </rule>
 
+  <rule id="toField" scope="public">
+      <one-of>
+          <item>
+              to
+              <tag>out="to";</tag>
+          </item>
+          <item>
+              go to
+              <tag>out="to";</tag>
+          </item>
+          <item>
+              going to
+              <tag>out="to";</tag>
+          </item>
+          <item>
+              travelling to
+              <tag>out="to";</tag>
+          </item>
+          <item>
+              travel to
+              <tag>out="to";</tag>
+          </item>
+      </one-of>
+      <ruleref uri="#places" />
+      <tag>out=rules.places;</tag>
+  </rule>
+
+  <rule id="leaveDateField" scope="public">
+      <one-of>
+          <item>
+              on
+              <tag>out="on";</tag>
+          </item>
+          <item>
+              leaving on
+              <tag>out="on";</tag>
+          </item>
+      </one-of>
+      <ruleref uri="#dates" />
+      <tag>out=rules.dates;</tag>
+  </rule>
+
+  <rule id="returnDateField" scope="public">
+      <one-of>
+          <item>
+              on
+              <tag>out="on";</tag>
+          </item>
+          <item>
+              leaving on
+              <tag>out="on";</tag>
+          </item>
+      </one-of>
+      <ruleref uri="#dates" />
+      <tag>out=rules.dates;</tag>
+  </rule>
+
+  <rule id="places" scope="public">
+    <one-of>
+      <item> paris <tag>out="paris";</tag></item>
+      <item> london <tag>out="london";</tag></item>
+      <item> new york <tag>out="new york";</tag></item>
+    </one-of>
+  </rule>
+
+  <rule id="fromTo" scope="public">
+      <one-of>
+          <item> from </item>
+          <item> to </item>
+      </one-of>
+      <ruleref uri="#places" />
+  </rule>
+
+  <rule id="leaveOnReturnOn" scope="public">
+      <one-of>
+          <item> on </item>
+          <item> returning </item>
+      </one-of>
+      <ruleref uri="#dates" />
+  </rule>
+
+  <rule id="dates" scope="public">
+      <one-of>
+          <item>
+              Monday
+              <tag>out="monday";</tag>
+          </item>
+          <item>
+              Tuesday
+              <tag>out="tuesday";</tag>
+          </item>
+          <item>
+              Wednesday
+              <tag>out="wednesday";</tag>
+          </item>
+          <item>
+              Thursday
+              <tag>out="thursday";</tag>
+          </item>
+          <item>
+              Friday
+              <tag>out="friday";</tag>
+          </item>
+          <item>
+              Saturday
+              <tag>out="saturday";</tag>
+          </item>
+          <item>
+              Sunday
+              <tag>out="sunday";</tag>
+          </item>
+          <item>
+              Tomorrow
+              <tag>out="tomorrow";</tag>
+          </item>
+      </one-of>
+  </rule>
+
+  <rule id="yn">
+      <one-of>
+          <item>yes</item>
+          <item>no</item>
+      </one-of>
+  </rule>
+
+<!--
   <rule id="init" scope="public">
     <item>
      from
@@ -17,7 +206,7 @@
      <tag>out.fromField = rules.places; out.toField = rules.places; </tag>
     </item>
   </rule> 
-
+-->
 
 
 </grammar>
