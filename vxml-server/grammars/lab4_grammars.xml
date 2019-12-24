@@ -5,19 +5,19 @@
   <rule id="init" scope="public">
     <one-of>
       <item>
-        <ruleref uri="fromField" />
+        <ruleref uri="#fromField" />
         <tag>out = rules.fromField;</tag>
       </item>
       <item>
-        <ruleref uri="toField" />
+        <ruleref uri="#toField" />
         <tag>out = rules.toField;</tag>
       </item>
       <item>
-        <ruleref uri="leaveDateField" />
+        <ruleref uri="#leaveDateField" />
         <tag>out = rules.leaveDateField;</tag>
       </item>
       <item>
-        <ruleref uri="returnDateField" />
+        <ruleref uri="#returnDateField" />
         <tag>out = rules.returnDateField;</tag>
       </item>
       <item>
