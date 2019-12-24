@@ -37,39 +37,43 @@
     </initial>
 
     <field name="fromField">
+      <grammar src="grammars/lab4_grammars.xml#places" />
         <prompt bargein="false">
             <break time="600" />Okay, what city are you leaving from?       
         </prompt>
         <noinput>You can choose: London, Paris or New York.<reprompt />
         </noinput>
-        <grammar src="grammars/lab4_grammars.xml#places" />
+        
     </field>
 
     <field name="toField">
+        <grammar src="grammars/lab4_grammars.xml#places" />
         <prompt bargein="false">
             <break time="600" />Okay, what city are you travelling to?
         </prompt>
         <noinput>You can choose: London, Paris or New York.<reprompt />
         </noinput>
-        <grammar src="grammars/lab4_grammars.xml#places" />
+        
     </field>
 
     <field name="leaveDateField">
+        <grammar src="grammars/lab4_grammars.xml#dates" />
         <prompt bargein="false">Okay, what date do you want to leave?</prompt>
         <nomatch>
           I did not hear that. You can select from Monday to Sunday.
         <reprompt />
         </nomatch>
-        <grammar src="grammars/lab4_grammars.xml#dates" />
+        
     </field>
     
     <field name="returnDateField">
+          <grammar src="grammars/lab4_grammars.xml#dates" />
           <prompt bargein="false">Okay, what date do you want to return?</prompt>
           <nomatch>
             I did not hear that. You can select from Monday to Sunday.
             <reprompt />
           </nomatch>
-          <grammar src="grammars/lab4_grammars.xml#dates" />
+          
       </field>
 
     <filled>

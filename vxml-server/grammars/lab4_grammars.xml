@@ -2,7 +2,7 @@
 <grammar version="1.0" tag-format="semantics/1.0" root="init">
 
   <!-- main rule here -->
-  <rule id="bookForm" scope="public">
+  <rule id="init" scope="public">
     <one-of>
       <item>
         <ruleref uri="fromField" />
@@ -196,17 +196,7 @@
       </one-of>
   </rule>
 
-<!--
-  <rule id="init" scope="public">
-    <item>
-     from
-     <ruleref uri="#places"/>
-     to
-     <ruleref uri="#places"/>
-     <tag>out.fromField = rules.places; out.toField = rules.places; </tag>
-    </item>
-  </rule> 
--->
+
 
 
 </grammar>
