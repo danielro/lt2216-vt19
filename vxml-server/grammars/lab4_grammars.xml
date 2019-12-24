@@ -2,17 +2,17 @@
 <grammar version="1.0" tag-format="semantics/1.0" root="init">
 
   <!-- main rule here -->
+
+
   <rule id="init" scope="public">
     <one-of>
       <item>
           <ruleref uri="#fromField" />
-          <ruleref uri="#places" />
           <ruleref uri="#toField" />
-          <ruleref uri="#places" />
           <ruleref uri="#leaveDateField" />
           <ruleref uri="#returnDateField" />
 
-          <tag>out.fromField=rules.fromField; out.places=rules.places;out.toField=rules.toField; out.places=rules.places; out.leaveDateField=rules.leaveDateField; out.returnDateField=rules.returnDateField;</tag>
+          <tag>out.fromField=rules.fromField; out.toField=rules.toField; out.leaveDateField=rules.leaveDateField; out.returnDateField=rules.returnDateField;</tag>
       </item>
       <item>
         <ruleref uri="#fromField" />
