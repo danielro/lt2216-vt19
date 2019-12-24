@@ -6,13 +6,27 @@
 
   <rule id="init" scope="public">
     <one-of>
+      <item repeat="0-1">I want to</item>
+      <item repeat="0-1">I am</item>
+    </one-of>
+    <one-of>
       <item>
-          <ruleref uri="#fromField" />
-          <ruleref uri="#toField" />
-          <ruleref uri="#leaveDateField" />
-          <ruleref uri="#returnDateField" />
+        <ruleref uri="#fromField" />
+        <ruleref uri="#toField" />
+        <ruleref uri="#leaveDateField" />
+        <ruleref uri="#returnDateField" />
 
-          <tag>out.fromField=rules.fromField; out.toField=rules.toField; out.leaveDateField=rules.leaveDateField; out.returnDateField=rules.returnDateField;</tag>
+        <tag>out.fromField=rules.fromField; out.toField=rules.toField; out.leaveDateField=rules.leaveDateField; out.returnDateField=rules.returnDateField;</tag>
+      </item>
+      <item>
+        <ruleref uri="#fromField" />
+        <ruleref uri="#places" />
+        <tag>out.fromField=rules.fromField; out.places=rules.places;</tag>
+      </item>
+      <item>
+        <ruleref uri="#toField" />
+        <ruleref uri="#places" />
+        <tag>out.toField=rules.toField; out.places=rules.places;</tag>
       </item>
       <item>
         <ruleref uri="#fromField" />
@@ -30,16 +44,7 @@
         <ruleref uri="#returnDateField" />
         <tag>out.returnDateField = rules.returnDateField;</tag>
       </item>
-      <item>
-          <ruleref uri="#fromField" />
-          <ruleref uri="#places" />
-          <tag>out.fromField=rules.fromField; out.places=rules.places;</tag>
-      </item>
-      <item>
-          <ruleref uri="#toField" />
-          <ruleref uri="#places" />
-          <tag>out.toField=rules.toField; out.places=rules.places;</tag>
-      </item>
+
     </one-of>
   </rule>
 
@@ -55,6 +60,10 @@
           </item>
           <item>
               leaving from
+              <tag>out="from";</tag>
+          </item>
+          <item>
+              traveling from
               <tag>out="from";</tag>
           </item>
           <item>
