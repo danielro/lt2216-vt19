@@ -120,7 +120,7 @@
               <tag>out="on";</tag>
           </item>
           <item>
-              leaving on
+              returning on
               <tag>out="on";</tag>
           </item>
       </one-of>
@@ -136,21 +136,6 @@
     </one-of>
   </rule>
 
-  <rule id="fromTo" scope="public">
-      <one-of>
-          <item> from </item>
-          <item> to </item>
-      </one-of>
-      <ruleref uri="#places" />
-  </rule>
-
-  <rule id="leaveOnReturnOn" scope="public">
-      <one-of>
-          <item> on </item>
-          <item> returning </item>
-      </one-of>
-      <ruleref uri="#dates" />
-  </rule>
 
   <rule id="dates" scope="public">
       <one-of>
