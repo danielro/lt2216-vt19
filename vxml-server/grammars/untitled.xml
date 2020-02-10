@@ -1,0 +1,11 @@
+<!--
+  <rule id="init" scope="public">
+    <item>
+     from
+     <ruleref uri="#places"/>
+     to
+     <ruleref uri="#places"/>
+     <tag>out.fromField = rules.places; out.toField = rules.places; </tag>
+    </item>
+  </rule> 
+-->
